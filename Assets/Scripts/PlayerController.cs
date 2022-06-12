@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
         move.x = Input.GetAxisRaw(H_XS);
         move.z = Input.GetAxisRaw(V_XS);
+        move.Normalize();
 
         if (move != Vector3.zero)
             transform.Translate(move * walkSpeed * Time.deltaTime);
